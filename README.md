@@ -10,3 +10,9 @@ Implementations of various deep learning architectures + extra theoretical infor
 
 **Classification:**
 1. Apply a fully connected layer that uses the high-level features from 1-2-3 to perform classification.
+
+Other potential applications; to achieve, you only modify the fully-connected layer bit == step1 under classification.
+- Segmentation.
+- Object Detection.
+- Regression.
+- Probabilistic Control.
