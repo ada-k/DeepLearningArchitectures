@@ -42,11 +42,35 @@ Other potential applications; to achieve, you only modify the fully-connected la
 - The process is iterative till the discriminator produces the highest probability that the generated data is real.
 - **G** == global optimum = produce the true data distribution == minmax
 
-### 3. [Recurrent Neural Nets - RNN](rnn.py)
+### 3. [Deep Sequence Modeling]() 
+- output at time t = a function of the input at t and past memory at time t-1.
+
+#### 3.1 [Recurrent Neural Nets - RNN](rnn.py)
+
+**Steps:**
+1. Initialise the weight matrices and the hidden state to 0.
+2. Defining the core function: the forward pass through:
+  1. Update of the hidden state(input + previous state).
+  2. Output computation to generate output and new hidden state.
+  
+**Design Criteria:**
+- Handle sequences of variable length.
+- Track longterm dependencies.
+- Maintain info about order.
+- Share parameters across the sequence.
+
+
+#### 3.2 [LSTM](lstm.py)
+Concepts:
+1. Maintains cell state.
+2. Has gates that control info flow: eliminates irrelevantt, keeps relevant.
+3. Backpropagation through time with partially uninterrupted gradient flow.
+
+#### 3.3 [Transformers](transformers.py)
 
 ### 4. [Reinforcement Learning](rl.py)
 
 ### 5. [Transfer Learning](tl.py)
 
-### 6. [Transformers](transformers.py)
+
 
