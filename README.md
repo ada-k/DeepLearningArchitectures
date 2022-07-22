@@ -1,7 +1,7 @@
 ## DeepLearningArchitectures
 Implementations of various deep learning architectures + extra theoretical information
 
-### 1.[Convolution Neural Nets - CNN](cnn.py)
+### 1. [Convolution Neural Nets - CNN](cnn.py)
 **Feature Extraction Local connectivity:**
 1. Apply a feature extraction filter == convolution layer.
 2. Add bias to the filter function.
@@ -20,12 +20,12 @@ Other potential applications; to achieve, you only modify the fully-connected la
 
 
 
-### 2.[Deep Generative Modeling]()
+### 2. [Deep Generative Modeling]()
 **Applications:**
 - Density Estimation.
 - Sample Generation.
 
-####2.1 [Autoencoders and Variational AE](vae.py)
+#### 2.1 [Autoencoders and Variational AE](vae.py)
 - Input data X is encoded(compressed, self-encoded, auto encoded) to  a lower dimensional latent space Z then model(decoder network) learns from the Z to reconstruct x as x hat.
 - Loss function == sq of difference between pixel by pixel difference between x and x hat.
 - VAEs introduces a stochasti process/randomness/probability aspect by calculating mean and SD from which the latent space features Z are sampled from.
@@ -36,7 +36,7 @@ Other potential applications; to achieve, you only modify the fully-connected la
 
 
 
-#### 2.2[Generative Adversarial Networks - GANS](gans.py)
+#### 2.2 [Generative Adversarial Networks - GANS](gans.py)
 - Generators starts from noise(z==latent space) then imitates input data based on this.
 - Discriminator tries to identify real data from fakes created by the generator.(minimises probability of fake)
 - The process is iterative till the discriminator produces the highest probability that the generated data is real.
