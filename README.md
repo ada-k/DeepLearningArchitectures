@@ -16,3 +16,4 @@ Other potential applications; to achieve, you only modify the fully-connected la
 - Object Detection.
 - Regression.
 - Probabilistic Control.
+- Autonomous navigation.
