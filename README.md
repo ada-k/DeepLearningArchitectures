@@ -42,3 +42,11 @@ Other potential applications; to achieve, you only modify the fully-connected la
 - The process is iterative till the discriminator produces the highest probability that the generated data is real.
 - **G** == global optimum = produce the true data distribution == minmax
 
+### 3. [Recurrent Neural Nets - RNN](rnn.py)
+
+### 4. [Reinforcement Learning](rl.py)
+
+### 5. [Transfer Learning](tl.py)
+
+### 6. [Transformers](transformers.py)
+
