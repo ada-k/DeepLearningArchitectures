@@ -72,5 +72,31 @@ Concepts:
 
 ### 5. [Transfer Learning](tl.py)
 
+### 0. [Elements of Neural Nets Architecture](preq.py)
+#### Layers:
+- **Input layer** - 
+- **Hidden layer** - 
+- **Output layer** - 
 
+
+#### Feedforward Network
+
+#### Backpropagation
+
+#### Weight and Bias
+
+#### Gradient Descent
+
+#### Convergence:
+- **Global optimum** - 
+- **Local Minima** - 
+
+#### Regularisation Terms
+
+#### Activation Functions
+
+### 0.1 [Prepping Neural Nets INput data](prep.py)
+- **Text** - 
+- **Images** - 
+- **Videos** - 
 
