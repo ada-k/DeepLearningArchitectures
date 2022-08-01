@@ -188,12 +188,9 @@ g(x) = e^x / sum(e^x)
 - *Example Cause*: Initialisation params that result in large cost functions >> gardients can accumulate during an update resulting to large updates.
 
 #### Convergence:
-- **Global optimum** - 
-- **Local Minima** - 
+- **Global optimisation** -  It is the extreme of the objective function for the entire input space. **Multimodal Optimisation** is a case where more than 1 global optimas exist. Algos include: **Genetic, Simulated Annealing, Particle Swarm Optimization**.
+- **Local optimisation** - Maximisation or Minimisation of objective functions for a given region. If an objective function has a single local optima, then it is by default the global optima. Local search is the process of finding the local optima. Global optima can also be located by local search if its the basin under focus. Algos include: **hill-climbing, Nelder-Mead, BFGS**.
 
-#### Convergence:
-- **Global optimum** - 
-- **Local Minima** - 
 
 #### Regularisation Terms
 ...
