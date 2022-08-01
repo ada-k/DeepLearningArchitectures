@@ -119,6 +119,7 @@ else:
 ```
 g(x) = 1.0 / (1.0 + e^-x)
 ```
+- Prone to problem of vanishing gradients.
 
 3. *Hyperbolic Tangent (Tanh)*
 - Takes real value inputs and outputs them in the range(-1, 1)
@@ -126,11 +127,21 @@ g(x) = 1.0 / (1.0 + e^-x)
 ```
 g(x) = (e^x – e^-x) / (e^x + e^-x)
 ```
+- Prone to problem of vanishing gradients.
+
 
 **For Output Layers**:
-1. Rectified Linear Activation (ReLU)
-2. Logistic (Sigmoid)
-3. Hyperbolic Tangent (Tanh)
+1. *Linear*
+- == no activation/identity. Returns output as is.
+
+2. *Logistic (Sigmoid)*
+
+3. *Softmax*
+- Outputs a vector of values that sum up to 1.0. Like probabilities.
+
+```
+g(x) = e^x / sum(e^x)
+```
 
 
 #### Optimisation Techniques
