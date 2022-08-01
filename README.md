@@ -100,7 +100,7 @@ Concepts:
 - **Bias** - Learnable. Represents how off the predictions are from the expected values. == error term but not cost function.
 
 
-#### [Activation Functions](activations.py)
+#### [Activation Functions](activation.py)
 - Root purpose: not all data is linear. Performing a simple calculation of weights and bias would otherwise be a normal layered linear regression.
 
 **For Hidden Layers**:
