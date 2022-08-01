@@ -67,25 +67,51 @@ Concepts:
 3. Backpropagation through time with partially uninterrupted gradient flow.
 
 #### 3.3 [Transformers](transformers.py)
+...
 
 ### 4. [Reinforcement Learning](rl.py)
+...
 
 ### 5. [Transfer Learning](tl.py)
+...
+
 
 ### 0. [Elements of Neural Nets Architecture](preq.py)
 #### Layers:
-- **Input layer** - 
-- **Hidden layer** - 
-- **Output layer** - 
+- **Input layer** - Receives raw input data and passes the info to follow up layers - hidden. No computation occurs here.
+- **Hidden layer** - An abstraction of the fully formed network. Performs computation on features from input layer and passes result to output layer. PS: They all use the same activation function.
+- **Output layer** - Final layer of the network hilding final value/prediction/output of the network. Has a different activation function depending on the goal.
 
 
 #### Feedforward Network
+*Connectivity*: Forward flow of information: Input used to calculate intermediate function in the hiddent layer to generate an output.
+1. Multiplication of input with neuron weights.
+2. Addition of bias.
+3. Passing output through an activation function.
+4. Output layer.
 
 #### Backpropagation
+- Repeated adjusting of network weights and bias to minimise the cost/loss function based on the previous epoch.
+- The level of adjustment is determined by the gradients of the cost function with respect to those parameters.
+- *Connectivity* - calculating gradients of the loss/error function, then updating existing parameters in response to the gradients
 
-#### Weight and Bias
+#### Weights and Bias
+- **Weight** - Learnable. Transforms input data within the hidden layers. 
+- **Bias** - Learnable. Represents how off the predictions are from the expected values. == error term but not cost function.
 
-#### Gradient Descent
+#### Optimisation Techniques
+##### Gradient Descent
+##### Stochastic Gradient Descent (SGD)
+##### Mini-Batch Stochastic Gradient Descent (MB — SGD)
+##### SGD with Momentum
+##### Nesterov Accelerated Gradient (NAG)
+##### Adaptive Gradient (AdaGrad)
+##### AdaDelta
+##### RMSProp
+##### Adam
+##### Nadam
+
+
 
 #### Convergence:
 - **Global optimum** - 
