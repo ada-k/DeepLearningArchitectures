@@ -94,6 +94,7 @@ Concepts:
 - Repeated adjusting of network weights and bias to minimise the cost/loss function based on the previous epoch.
 - The level of adjustment is determined by the gradients of the cost function with respect to those parameters.
 - *Connectivity* - calculating gradients of the loss/error function, then updating existing parameters in response to the gradients
+![image](https://user-images.githubusercontent.com/50487929/182075709-badb4f60-c256-49ac-886f-e8480048d15b.png)
 
 #### Weights and Bias
 - **Weight** - Learnable. Transforms input data within the hidden layers. 
@@ -145,27 +146,57 @@ g(x) = e^x / sum(e^x)
 
 
 #### Optimisation Techniques
-##### Gradient Descent
-##### Stochastic Gradient Descent (SGD)
-##### Mini-Batch Stochastic Gradient Descent (MB — SGD)
-##### SGD with Momentum
-##### Nesterov Accelerated Gradient (NAG)
-##### Adaptive Gradient (AdaGrad)
-##### AdaDelta
-##### RMSProp
-##### Adam
-##### Nadam
+##### [Gradient Descent]()
+...
+##### [Stochastic Gradient Descent (SGD)]()
+...
+##### [Mini-Batch Stochastic Gradient Descent (MB — SGD)]()
+...
+##### [SGD with Momentum]()
+...
+##### [Nesterov Accelerated Gradient (NAG)]()
+...
+##### [Adaptive Gradient (AdaGrad)]()
+...
+##### [AdaDelta]()
+...
+##### [RMSProp]()
+...
+##### [Adam]()
+...
+##### [Nadam]()
+...
 
 #### Gradient Issues:
-- *Vanishing gradients* - 
-- *Exploding gradients* - 
+
+- *Vanishing gradients* - During back propagation, gardient is calucalted w.r.t the params(weights and bias) with a goal of minimising the cost function. In the process, the gradients descennds downwards and often gets smaller till it hits a 0, -- at this point, the weights and bias remain almost unchanged resulting to the 0 chance of hitting a global optimum.
+
+- *Vanishing Flags*:
+1. Significant change in higher level params compared to slight/or no change in lower level params.
+2. Weights may become 0 during training.
+3. Models learns slowly and may stagnate during early iterations.
+
+- *Example Cause*:Certain activation functions, e.g sigmoid results in a shrink in variance between the input and output values s.t large inputs saturate close to 0.
+
+- *Exploding gradients* - In this case, the gradient ascends upwards resulting in huge weight and bias adjustments causing the gradient to diverge, hence explodes.
+
+- *Exploding Flags*:
+1. Exponential growth  in model parameters.
+2. Model experienced avalanche training.
+3. Model weights may appear as NaN during training.
+
+- *Example Cause*: Initialisation params that result in large cost functions >> gardients can accumulate during an update resulting to large updates.
+
+#### Convergence:
+- **Global optimum** - 
+- **Local Minima** - 
 
 #### Convergence:
 - **Global optimum** - 
 - **Local Minima** - 
 
 #### Regularisation Terms
-
+...
 
 ### 0.1 [Prepping Neural Nets INput data](prep.py)
 - **Text** - 
