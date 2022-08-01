@@ -76,10 +76,10 @@ Concepts:
 ...
 
 
-### 0. [Elements of Neural Nets Architecture](preq.py)
+### 0. [Elements of Neural Nets Architecture](#)
 #### Layers:
 - **Input layer** - Receives raw input data and passes the info to follow up layers - hidden. No computation occurs here.
-- **Hidden layer** - An abstraction of the fully formed network. Performs computation on features from input layer and passes result to output layer. PS: They all use the same activation function.
+- **Hidden layer** - An abstraction of the fully formed network. Performs computation on features from input layer(or another hidden layer) and passes result to output laye r(or another hidden layer). PS: They all use the same activation function.
 - **Output layer** - Final layer of the network hilding final value/prediction/output of the network. Has a different activation function depending on the goal.
 
 
@@ -99,6 +99,40 @@ Concepts:
 - **Weight** - Learnable. Transforms input data within the hidden layers. 
 - **Bias** - Learnable. Represents how off the predictions are from the expected values. == error term but not cost function.
 
+
+#### [Activation Functions](activations.py)
+- Root purpose: not all data is linear. Performing a simple calculation of weights and bias would otherwise be a normal layered linear regression.
+
+**For Hidden Layers**:
+1. *Rectified Linear Activation (ReLU)*
+- Function is linear for values > 0 but still non linear since all -ve values are tranformed to 0
+```
+# g(z) = max{0, z}
+if input > 0:
+	return input
+else:
+	return 0
+```
+
+2. *Logistic (Sigmoid)*
+- Takes real values as input and outputs them in the range(0,1)
+```
+g(x) = 1.0 / (1.0 + e^-x)
+```
+
+3. *Hyperbolic Tangent (Tanh)*
+- Takes real value inputs and outputs them in the range(-1, 1)
+- Takes same shape as a sigmoid.
+```
+g(x) = (e^x – e^-x) / (e^x + e^-x)
+```
+
+**For Output Layers**:
+1. Rectified Linear Activation (ReLU)
+2. Logistic (Sigmoid)
+3. Hyperbolic Tangent (Tanh)
+
+
 #### Optimisation Techniques
 ##### Gradient Descent
 ##### Stochastic Gradient Descent (SGD)
@@ -111,7 +145,9 @@ Concepts:
 ##### Adam
 ##### Nadam
 
-
+#### Gradient Issues:
+- *Vanishing gradients* - 
+- *Exploding gradients* - 
 
 #### Convergence:
 - **Global optimum** - 
@@ -119,7 +155,6 @@ Concepts:
 
 #### Regularisation Terms
 
-#### Activation Functions
 
 ### 0.1 [Prepping Neural Nets INput data](prep.py)
 - **Text** - 
