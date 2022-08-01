@@ -103,7 +103,7 @@ Concepts:
 #### [Activation Functions](activation.py)
 - Root purpose: not all data is linear. Performing a simple calculation of weights and bias would otherwise be a normal layered linear regression.
 
-**For Hidden Layers**:
+##### For Hidden Layers:
 1. *Rectified Linear Activation (ReLU)*
 - Function is linear for values > 0 but still non linear since all -ve values are tranformed to 0
 ```
@@ -130,7 +130,7 @@ g(x) = (e^x – e^-x) / (e^x + e^-x)
 - Prone to problem of vanishing gradients.
 
 
-**For Output Layers**:
+##### For Output Layers:
 1. *Linear*
 - == no activation/identity. Returns output as is.
 
