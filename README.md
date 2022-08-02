@@ -192,8 +192,35 @@ g(x) = e^x / sum(e^x)
 - **Local optimisation** - Maximisation or Minimisation of objective functions for a given region. If an objective function has a single local optima, then it is by default the global optima. Local search is the process of finding the local optima. Global optima can also be located by local search if its the basin under focus. Algos include: **hill-climbing, Nelder-Mead, BFGS**.
 
 
-#### Regularisation Terms
-...
+#### [Regularisation Terms](regularisation.py)
+- Techniques that modify learning algos by penalising weight matrices of nodes-  so they can generalise better.
+
+##### 1. L2 and L1
+The loss function of a network is extended by a regularisation term. \
+Reg term is multiplied by reg rate (alpha) before being added to the loss function.\
+`Cost function = Loss (say, binary cross entropy) + Regularization term`\
+With this, the gradient can be calculated with the updated loss function and use it to update the weights in back propagation.
+
+![image](https://user-images.githubusercontent.com/50487929/182291969-0404a3c8-884a-45d7-ad1a-f8cae68983de.png)
+left=L1, right=L2
+*Source: An Introduction to Statistical Learning by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani*
+
+
+- *L2/Weight Decay/Ride Regression* - Euclidean norm of the weight matrices == sum over all squared weight values of a weight matrix.\
+Forces weights to decay towards 0 but not 0 -- cause by adding a reg term, we introduce an additional subtraction from the current weights.
+
+- *L1/Lasso Regression* - Reg term is the absolute sum of weight values of a weight matrix.\
+Forces the weights all the way towards 0.
+
+PS: Smaller weight values reduces the impact of nodes in hidden layers thus achieving a simple model that doesn't model noise.
+The trade off is in the alpha value: 
+- If alpha is too high, the model will be too simple and chances of underfitting are high.
+- If alpha is too low, the model will lbe too complex and we're back to the problem of overfitting.
+
+##### 2. Dropout
+##### 3. Data Augmentation
+##### 4. Early Stopping
+
 
 ### 0.1 [Prepping Neural Nets INput data](prep.py)
 - **Text** - 
