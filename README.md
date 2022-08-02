@@ -202,11 +202,11 @@ Reg term is multiplied by reg rate (alpha) before being added to the loss functi
 With this, the gradient can be calculated with the updated loss function and use it to update the weights in back propagation.
 
 ![image](https://user-images.githubusercontent.com/50487929/182291969-0404a3c8-884a-45d7-ad1a-f8cae68983de.png)
-left=L1, right=L2
+left=L1, right=L2\
 *Source: An Introduction to Statistical Learning by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani*
 
 
-- *L2/Weight Decay/Ride Regression* - Euclidean norm of the weight matrices == sum over all squared weight values of a weight matrix.\
+- *L2/Weight Decay/Ridge Regression* - Euclidean norm of the weight matrices == sum over all squared weight values of a weight matrix.\
 Forces weights to decay towards 0 but not 0 -- cause by adding a reg term, we introduce an additional subtraction from the current weights.
 
 - *L1/Lasso Regression* - Reg term is the absolute sum of weight values of a weight matrix.\
@@ -218,8 +218,19 @@ The trade off is in the alpha value:
 - If alpha is too low, the model will lbe too complex and we're back to the problem of overfitting.
 
 ##### 2. Dropout
+- During training, a neuron gets turned off with some probability **P**.
+- Applied at every forward propagation and weight update step.
+- Preferred in large networks to utilise the randomness.
+
+![image](https://user-images.githubusercontent.com/50487929/182292999-51a2301b-9228-4573-afc2-ed112ba90b91.png)
+ Source: Journal of Machine Learning Research 15 (2014)
+ 
+
 ##### 3. Data Augmentation
+Increasing size of training data e.g by rotating, flipping, scaling or shifting an image.
+
 ##### 4. Early Stopping
+A cross-validation technique that sets aside a validation set, and stops the model training when the validation set accuracy is getting worse.
 
 
 ### 0.1 [Prepping Neural Nets INput data](prep.py)
